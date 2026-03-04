@@ -1,4 +1,4 @@
-# Commercial & Supply Chain Command Center
+# Supply Chain Optimization: Commercial Analytics Suite
 
 ## **1. Project Overview**
 
