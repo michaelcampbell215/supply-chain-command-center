@@ -1,52 +1,34 @@
-# Supply Chain Optimization: Commercial Analytics Suite
+# Enterprise Supply Chain Optimization & Spend Analytics
 
-## **1. Project Overview**
+## **Project Overview**
 
-### **Description:**
+**The Chaos on the Ground:** Operations leaders were flying blind. Critical spending and logistics data were fragmented across multiple disconnected systems, making it impossible to map physical unit movement against discretionary spend.
+**The Solution:** I built an interactive Supply Chain Command Center—a unified front-end analytical layer that standardized 15.4 million records of fragmented competitor data and resolved over 10,000 location errors. This established a reliable "Golden Record," eliminating physical logistics bottlenecks and actively monitoring the disconnect between compliance risk, sales cyclicality, and actual logistics throughput.
 
-This project acts as the front-end analytical layer to a highly optimized enterprise data warehouse. The business case was to provide actionable, C-suite insights across three distinct domains: Revenue Growth (CRO), Logistics & Network Optimization (COO), and Compliance Guardrails (CCO), utilizing a single unified data source.
+## **Data Sources**
 
-### **Objectives:**
+- **Enterprise Data Warehouse Extract (CMS Open Payments):** Aggregated and highly structured CSV outputs generated from a custom MySQL Star Schema (15M+ rows).
+- **Geospatial Reference Maps:** Lat/Lng grain crosswalks to measure accurate physical transit realities.
 
-- Translate 15 million operational data points into clear, strategic narratives for executive decision-makers.
-- Develop an interactive, Tableau-based "Command Center" that allows for deep relational filtering across geographies and product lines.
-- Identify invisible risks (fraud) and undetected opportunities (logistics efficiency).
+## **Process**
 
-## **2. Data Sources**
+- **SQL Engineering:** Replaced manual guesswork and spreadsheet crunching with Z-Score statistical thresholds hardcoded into SQL to mathematically isolate anomalous spending behavior.
+- **Demand Forecasting Logic:** Developed leading/lagging indicator models to trigger `HOT MARKET`, `AT RISK`, or `STOCKPILING` signals based on real-time data flows.
+- **Interactive Control Tower:** Engineered 3 Tableau Dashboards utilizing Dual-Axis synchronizations and Lorenz Curves to filter complex relational data across Geographies and Specialties instantly.
 
-### **Primary Datasets:**
+## **Key Findings**
 
-- **Enterprise Data Warehouse Extract:** Aggregated and highly structured CSV outputs generated from a custom MySQL Star Schema (derived from CMS Open Payments data). Data was explicitly grained for specific dashboard views (e.g., Recipient-level grain for Lorenz Curves, Lat/Lng grain for mapping).
+- **Compliance Exposure:** Uncovered **$11.7M in organizational spend risk** (a critical DOJ audit trigger) by mathematically isolating discretionary spend, mapping physical supply chain friction to guide executive-level demand planning.
+- **Logistics Optimization:** Proved that **San Diego** drives significantly higher surgical device throughput than Los Angeles, challenging legacy population-based assumptions.
+- **Customer Concentration:** The Whale Curve revealed that over **80% of commercial revenue** relies on just the **Top 2%** of active accounts.
 
-## **3. Process**
+## **Recommendations (Operational Scripts)**
 
-### **Exploratory Data Analysis (EDA):**
+- **CCO (Compliance) Roadmap:** Execute immediate internal audits on the specific ZIP codes flagged in the Risk Matrix, isolating the "Unknown Product" payments.
+- **COO (Logistics) Roadmap:** Shift the next West Coast Forward Stocking Location (FSL) prioritization to San Diego to minimize true "last mile" transit times for high-volume units.
+- **CRO (Growth) Roadmap:** Deploy targeted retention protocols for the "Top 2% Platinum" accounts to stabilize extreme quarterly revenue cyclicality.
 
-- Evaluated payment distributions to identify "Whale" customers (the Pareto Principle effect in sales).
-- Mapped geographic spend versus physical volume movement.
-- Analyzed transaction patterns to distinguish between routine business expenses (royalties/acquisitions) and high-risk discretionary spend (consulting/speaker fees).
+## **Next Steps**
 
-### **Analytical Techniques:**
-
-- **Statistical Risk Modeling:** Applied Z-Score statistical thresholds within SQL to mathematically flag anomalous spending behavior by physicians.
-- **Demand Forecasting Logic:** Developed leading/lagging indicator models (comparing educational investment to commercial sales) to trigger `HOT MARKET`, `AT RISK`, or `STOCKPILING` signals.
-- **Advanced Dashboard Engineering:** Built 3 Tableau Dashboards utilizing Dual-Axis synchronizations, customized Tooltips, Lorenz (Whale) Curves, Treemaps, and scatter plots. Engineered relational dashboard filters enabling full-screen interactivity based on Specialty and Territory.
-
-## **4. Key Findings**
-
-- **Compliance Exposure:** Uncovered **$11.7M in Unallocated Consulting Fees** (a major DOJ audit trigger) and identified a massive $170M+ outlier "Consulting" payment by mathematically isolating discretionary spend from standard business operations.
-- **Logistics Optimization:** Geographic mapping of physical unit volume proved that **San Diego** drives significantly higher surgical device throughput than Los Angeles, challenging traditional population-based logistics assumptions.
-- **Sales Cyclicality:** Time-series analysis revealed extreme quarterly revenue cyclicality (massive end-of-quarter pushes followed by severe drop-offs), indicating a "hockey stick" sales culture.
-- **Customer Concentration:** The Whale Curve proved that over 80% of commercial revenue is generated by a tiny fraction (Top 2%) of active physicians.
-
-## **5. Recommendations**
-
-- **CCO (Compliance):** Launch an immediate internal audit into the specific doctors and ZIP codes flagged in the Risk Matrix scatter plot, specifically investigating the $170M outlier and the "Unknown Product" consulting payments.
-- **COO (Logistics):** Prioritize San Diego over Los Angeles for the next West Coast Forward Stocking Location (FSL) to minimize "last mile" transit times for high-volume surgical devices.
-- **CRO (Growth):** Restructure sales compensation plans to incentivize consistent month-over-month performance, smoothing out the aggressive quarterly revenue cycles. Refocus marketing efforts on retaining the "Top 2% Platinum" physicians who carry the company's revenue.
-
-## **6. Next Steps & Action Plan**
-
-- **A/B Testing Logistics:** Pilot a micro-hub in the recommended San Diego location and measure the reduction in expedited freight costs over a 90-day period.
-- **Predictive Integration:** Evolve the Demand Forecasting matrix from a visual heatmap into a Machine Learning model that automatically triggers inventory purchase orders before stockouts occur.
-- **Automated Alerting:** Set up automated email subscriptions in Tableau so the Compliance team is instantly notified the moment a designated physician's Z-Score crosses the danger threshold.
+- **Proactive Maintenance:** Evolve the Demand Forecasting matrix from a visual heatmap into a Machine Learning model that automatically triggers inventory purchase orders before stockouts occur.
+- **Golden Record Iteration:** Set up automated alert subscriptions so operations teams are instantly notified the moment a designated target's Z-Score crosses the danger threshold.
